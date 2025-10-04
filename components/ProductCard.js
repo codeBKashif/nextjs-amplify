@@ -11,7 +11,7 @@ export default function ProductCard({product}){
 
     return (
     <div className="border rounded-lg p-4 shadow text-center">
-        <div className="aspect-1 w-full overflow-hidden rounded">
+        <div className="aspect-[.9] w-full overflow-hidden rounded">
             <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         </div>
         <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
