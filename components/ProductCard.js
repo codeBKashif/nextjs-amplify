@@ -10,8 +10,10 @@ export default function ProductCard({product}){
     }
 
     return (
-        <div className="border rounded-lg p-4 shadow text-center">
-        <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded" />
+    <div className="border rounded-lg p-4 shadow text-center">
+        <div className="aspect-1 w-full overflow-hidden rounded">
+            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+        </div>
         <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
         <p className="text-gray-600">${product.price}</p>
         <button
@@ -20,6 +22,6 @@ export default function ProductCard({product}){
         >
             Add to Cart
         </button>
-        </div>
+    </div>
     )
 }
